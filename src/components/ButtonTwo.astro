@@ -1,0 +1,21 @@
+---
+const { isRounded = false } = Astro.props;
+---
+<button class:list={
+    ["bg-blue-300",
+     "text-white",
+     "px-3",
+     "pt-1",
+     "pb-2",
+     "leading-3",
+     "hover:bg-blue-500",
+     "transition-colors",
+     { rounded: isRounded }]}
+     
+     class="flex items-center h-10"
+     >
+
+    <slot name="text" />
+    <div class="bg-red-400 text-white rounded-full p-1 ml-2 size-6 flex items-center justify-center-center"></div>
+    <slot name="icon" /> 
+</button>
